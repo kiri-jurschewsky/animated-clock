@@ -8,20 +8,49 @@ html {
   width: 300px;
 
   background: transparent url("../images/clock-face.svg") no-repeat center center;
+
+  position: relative;
 }
 
 .center {
   width: 28px;
+  position: absolute;
+  left: calc(50% - 15px);
+  top: 135px;
+  z-index: 100;
+
+
 }
 
 .hand {
   width: 14px;
+  position: absolute;
+  left: calc(50% - 8px);
+  bottom: : 150px;
 }
 
 .hand-hour {
-
+z-index: 2;
+animation: spin 6s infinite;
+transform-origin: bottom;;
 }
 
 .hand-minute {
+  z-index: 3;
+  animation: spin 3s infinite;
+  transform-origin: bottom;;
+
+}
+
+@keyframes spin {
+
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+
 
 }
